@@ -42,7 +42,7 @@ function draw() {
 
     fill("yellow");
     textSize(25);
-    text("Press the 'R' key to replay", 100, 450);
+    text("Press the 'R' key to refill", 100, 450);
 
     if(keyWentDown(UP_ARROW)) {
       foodS = 0;
