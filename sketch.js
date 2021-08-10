@@ -17,7 +17,7 @@ function setup() {
 
   dog = createSprite(250, 350, 30, 30);
   dog.addImage(dogImg);
-  dog.scale = 0.11;
+  dog.scale = 0.20;
 
   foodStock = database.ref("Food");
   foodStock.on("value", readStock);
@@ -40,9 +40,7 @@ function draw() {
 
   if(foodS <= 0) {
 
-    fill("yellow");
-    textSize(25);
-    text("Press the 'R' key to refill", 100, 450);
+    
 
     if(keyWentDown(UP_ARROW)) {
       foodS = 0;
@@ -58,13 +56,20 @@ function draw() {
 
   drawSprites();
   
-  fill("skyBlue");
-  textSize(30);
-  text("Food Remaining : " + foodS, 100, 250);
-
+  
   fill("white");
-  textSize(20);
-  text("Note : To feed Choco(doggy), press the UP arrow key", 13, 40);
+  stroke("5")
+  textSize(15);
+  text("Note: *Press UP_ARROW Key to Feed Drago!!*", 20, 40);
+
+  fill("green");
+  stroke("20") 
+   textSize(15);
+  text("Food Remaining = " + foodS, 150, 200);
+
+  fill("black");
+    textSize(15);
+    text("Press the 'R' key to refill", 150, 480);
 
 }
 
